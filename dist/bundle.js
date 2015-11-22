@@ -11,6 +11,89 @@ var flash = new _flashMessage2.default("Gulp, Babel and Browserify");
 
 flash.display();
 
+var message = "web forum";
+
+function printInCaps(value) {
+  var message = value.toUpperCase();
+  return message;
+}
+
+printInCaps("profiles");
+
+console.log(message);
+
+function loadProfiles() {
+  var userNames = arguments.length <= 0 || arguments[0] === undefined ? [] : arguments[0];
+
+  var namesLength = userNames.length;
+  console.log(namesLength);
+}
+
+loadProfiles(['John', 'Jane', 'Jim']);
+loadProfiles();
+loadProfiles(undefined);
+
+function setPageThread(name) {
+  var _ref = arguments.length <= 1 || arguments[1] === undefined ? {} : arguments[1];
+
+  var popular = _ref.popular;
+  var expires = _ref.expires;
+  var activeClass = _ref.activeClass;
+
+  console.log("Name: " + name);
+  console.log("Popular: " + popular);
+  console.log("Expires: " + expires);
+  console.log("Active: " + activeClass);
+}
+
+setPageThread("New Version out Soon!", {
+  popular: true,
+  expires: 10000,
+  activeClass: "is-page-thread"
+});
+
+setPageThread("ES2015 With Babel and Gulp", {
+  popular: true
+});
+
+setPageThread("Ruby on Rails");
+
+var printName = function printName(value) {
+  console.log(value);
+};
+
+printName('Vivek');
+
+function buildUser(firstName, lastName) {
+  var fullName = firstName + " " + lastName;
+  return { firstName: firstName, lastName: lastName, fullName: fullName };
+}
+
+var user = buildUser("Arya", "Stark");
+console.log(user.firstName);
+console.log(user.lastName);
+console.log(user.fullName);
+
+var name = "Tyrion";
+var age = 40;
+var friends = ["Daenerys", "Lord Varys"];
+
+var actor = { name: name, age: age, friends: friends };
+
+console.log(actor.name);
+console.log(actor.age);
+console.log(actor.friends);
+
+var _buildUser = buildUser("Petyr", "Baelish");
+
+var firstName = _buildUser.firstName;
+var lastName = _buildUser.lastName;
+// let {firstName, lastName, fullName} = buildUser("Petyr","Baelish");
+
+console.log(firstName);
+console.log(lastName);
+// console.log(fullName);
+
 },{"./flash-message":2}],2:[function(require,module,exports){
 "use strict";
 
