@@ -1,7 +1,11 @@
-The below command uses the presets flag which indicates that we want to transpile ES2015. The output is piped to a new file called app.js
+# Getting Started with Babel and ES2015
 
-babel app.js.es6 --presets es2015 > app.js
+### Commands
+npm run build  
+npm run start
 
-The above command can be made little shorter by writing the presets to a file called .babelrc. This file will be automatically read by the babel command everytime we run it from the root folder.
-
-babel app.js.es6 > app.js
+### Notes
+[ES2015 Compatibility](https://kangax.github.io/compat-table/es6/)  
+[Babel "Try it out"](http://babeljs.io/repl/)  
+[Babel setup](http://babeljs.io/docs/setup/)  
+[Babel plugins](http://babeljs.io/docs/plugins/)
