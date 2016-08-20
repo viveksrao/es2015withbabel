@@ -4,7 +4,8 @@
   "description": "A Simple Demo App which showcases using ES2015 and Babel.",
   "main": "index.js",
   "scripts": {
-    "build": "babel src -d build"
+    "build": "babel src -d build",
+    "start": "webpack"
   },
   "keywords": [
     "ES2015",
